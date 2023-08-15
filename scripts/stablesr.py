@@ -55,9 +55,9 @@ from srmodule.spade import SPADELayers
 from srmodule.struct_cond import EncoderUNetModelWT, build_unetwt
 from srmodule.colorfix import adain_color_fix, wavelet_color_fix
 
-SD_WEBUI_PATH = Path.cwd()
-ME_PATH = SD_WEBUI_PATH / 'extensions' / 'sd-webui-stablesr'
-MODEL_PATH = ME_PATH / 'models'
+SD_WEBUI_PATH = Path(shared.cmd_opts.data_dir)
+ME_PATH = SD_WEBUI_PATH / 'models'
+MODEL_PATH = ME_PATH / 'stablesr'
 FORWARD_CACHE_NAME = 'org_forward_stablesr'
 
 class StableSR:
